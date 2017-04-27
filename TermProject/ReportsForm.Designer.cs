@@ -35,45 +35,48 @@
             // 
             // advOrdReportButton
             // 
-            this.advOrdReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.advOrdReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.advOrdReportButton.Location = new System.Drawing.Point(65, 12);
+            this.advOrdReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.advOrdReportButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.advOrdReportButton.ForeColor = System.Drawing.Color.White;
+            this.advOrdReportButton.Location = new System.Drawing.Point(12, 12);
             this.advOrdReportButton.Name = "advOrdReportButton";
             this.advOrdReportButton.Size = new System.Drawing.Size(153, 39);
             this.advOrdReportButton.TabIndex = 0;
             this.advOrdReportButton.Text = "Advance orders";
-            this.advOrdReportButton.UseVisualStyleBackColor = true;
+            this.advOrdReportButton.UseVisualStyleBackColor = false;
             this.advOrdReportButton.Click += new System.EventHandler(this.advOrdReportButton_Click);
             // 
             // hallsUsageReportButton
             // 
-            this.hallsUsageReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.hallsUsageReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hallsUsageReportButton.Location = new System.Drawing.Point(65, 57);
+            this.hallsUsageReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.hallsUsageReportButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hallsUsageReportButton.ForeColor = System.Drawing.Color.White;
+            this.hallsUsageReportButton.Location = new System.Drawing.Point(12, 57);
             this.hallsUsageReportButton.Name = "hallsUsageReportButton";
             this.hallsUsageReportButton.Size = new System.Drawing.Size(153, 39);
             this.hallsUsageReportButton.TabIndex = 1;
             this.hallsUsageReportButton.Text = "Halls usage";
-            this.hallsUsageReportButton.UseVisualStyleBackColor = true;
+            this.hallsUsageReportButton.UseVisualStyleBackColor = false;
             this.hallsUsageReportButton.Click += new System.EventHandler(this.hallsUsageReportButton_Click);
             // 
             // restaurantActReportButton
             // 
-            this.restaurantActReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.restaurantActReportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.restaurantActReportButton.Location = new System.Drawing.Point(65, 102);
+            this.restaurantActReportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.restaurantActReportButton.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.restaurantActReportButton.ForeColor = System.Drawing.Color.White;
+            this.restaurantActReportButton.Location = new System.Drawing.Point(12, 102);
             this.restaurantActReportButton.Name = "restaurantActReportButton";
             this.restaurantActReportButton.Size = new System.Drawing.Size(153, 39);
             this.restaurantActReportButton.TabIndex = 2;
             this.restaurantActReportButton.Text = "Restaurant activity";
-            this.restaurantActReportButton.UseVisualStyleBackColor = true;
+            this.restaurantActReportButton.UseVisualStyleBackColor = false;
             this.restaurantActReportButton.Click += new System.EventHandler(this.restaurantActReportButton_Click);
             // 
             // ReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 248);
+            this.ClientSize = new System.Drawing.Size(178, 214);
             this.Controls.Add(this.restaurantActReportButton);
             this.Controls.Add(this.hallsUsageReportButton);
             this.Controls.Add(this.advOrdReportButton);

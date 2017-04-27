@@ -41,12 +41,18 @@ namespace TermProject
                         using (SqlCommand cmd = new SqlCommand("addAdvOrd", con))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
-
-                            cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = nameTextBox.Text;
-                            cmd.Parameters.Add("@Surname", SqlDbType.NVarChar).Value = surnameTextBox.Text;
-                            cmd.Parameters.Add("@Patr", SqlDbType.NVarChar).Value = patrTextBox.Text;
-                            cmd.Parameters.Add("@TelNum", SqlDbType.VarChar).Value = telTextBox.Text;
-
+                            //check if we choosed existing record about client
+                            if (clientInfo.id == null)
+                            {
+                                cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = nameTextBox.Text;
+                                cmd.Parameters.Add("@Surname", SqlDbType.NVarChar).Value = surnameTextBox.Text;
+                                cmd.Parameters.Add("@Patr", SqlDbType.NVarChar).Value = patrTextBox.Text;
+                                cmd.Parameters.Add("@TelNum", SqlDbType.VarChar).Value = telTextBox.Text;
+                            }
+                            else
+                            {
+                                cmd.Parameters.Add("@Id", SqlDbType.Int).Value = clientInfo.id;
+                            }
                             cmd.Parameters.Add("@TableId", SqlDbType.Int).Value = getTableId();
                             cmd.Parameters.Add("@Quant", SqlDbType.Int).Value = quantUpDown.Text;
 
@@ -102,17 +108,12 @@ namespace TermProject
         }
         private void clearElenents()
         {
-            foreach (Control c in this.Controls)
-            {
-                if (c is TextBox)
-                {
-                    TextBox textBox = c as TextBox;
-                    textBox.Text = "";
-                }
-            }
+            nameTextBox.Text = "";
+            surnameTextBox.Text = "";
+            patrTextBox.Text = "";
+            telTextBox.Text = "";
             freeTableListView.Items.Clear();
             quantUpDown.Value = 1;
-
         }
 
         private void updateTableListButton_Click(object sender, EventArgs e)
@@ -192,10 +193,6 @@ namespace TermProject
             patrTextBox.Enabled = true;
             telTextBox.Enabled = true;
             clearElenents();
-            nameTextBox.Text = "";
-            surnameTextBox.Text = "";
-            patrTextBox.Text = "";
-            telTextBox.Text = "";
             clientInfo = new ClInfo();
         }
     }

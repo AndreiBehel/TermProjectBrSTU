@@ -161,14 +161,15 @@
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(100, 310);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(168)))), ((int)(((byte)(43)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(97, 304);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 34);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 11;
             this.button1.Text = "Cancel order";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -202,11 +203,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(26, 18);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(111)))), ((int)(((byte)(116)))));
+            this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(250, 25);
+            this.label4.Size = new System.Drawing.Size(282, 30);
             this.label4.TabIndex = 40;
             this.label4.Text = "Advance orders information";
             // 
@@ -229,7 +230,7 @@
             this.Controls.Add(this.telNumTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CancelAdvOrdForm";
-            this.Text = "Cancel advance order";
+            this.Text = "Cancel Advance Order";
             this.Load += new System.EventHandler(this.CancelAdvOrdForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.db_restaurantDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advOrdViewBindingSource)).EndInit();

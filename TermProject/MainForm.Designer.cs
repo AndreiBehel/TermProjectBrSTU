@@ -85,7 +85,7 @@
             this.advOrdButton.ForeColor = System.Drawing.Color.White;
             this.advOrdButton.Location = new System.Drawing.Point(12, 373);
             this.advOrdButton.Name = "advOrdButton";
-            this.advOrdButton.Size = new System.Drawing.Size(121, 50);
+            this.advOrdButton.Size = new System.Drawing.Size(122, 50);
             this.advOrdButton.TabIndex = 1;
             this.advOrdButton.Text = "Add adv order";
             this.advOrdButton.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             this.Reports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.Reports.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Reports.ForeColor = System.Drawing.Color.White;
-            this.Reports.Location = new System.Drawing.Point(368, 373);
+            this.Reports.Location = new System.Drawing.Point(358, 374);
             this.Reports.Name = "Reports";
             this.Reports.Size = new System.Drawing.Size(134, 50);
             this.Reports.TabIndex = 2;

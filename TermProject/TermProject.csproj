@@ -184,9 +184,6 @@
     <None Include="Resources\e27cf00576b1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\client.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\flat-1298035_640.png" />
   </ItemGroup>
   <ItemGroup>

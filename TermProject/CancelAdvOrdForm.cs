@@ -21,6 +21,8 @@ namespace TermProject
 
         private void CancelAdvOrdForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'db_restaurantDataSet.getUncompletedOrd' table. You can move, or remove it, as needed.
+            //this.getUncompletedOrdTableAdapter.Fill(this.db_restaurantDataSet.getUncompletedOrd);
             // TODO: This line of code loads data into the 'db_restaurantDataSet.AdvOrdView' table. You can move, or remove it, as needed.
             this.advOrdViewTableAdapter.Fill(this.db_restaurantDataSet.AdvOrdView);
 
