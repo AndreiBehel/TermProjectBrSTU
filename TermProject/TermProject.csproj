@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE062433-E6C5-433B-9357-7D4D1314A5FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TermProject</RootNamespace>
+    <AssemblyName>TermProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClientForm.Designer.cs">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvOrderReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvOrderReg.Designer.cs">
+      <DependentUpon>AdvOrderReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AOReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AOReportForm.Designer.cs">
+      <DependentUpon>AOReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CancelAdvOrdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CancelAdvOrdForm.Designer.cs">
+      <DependentUpon>CancelAdvOrdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db_restaurantDataSet.cs">
+      <DependentUpon>db_restaurantDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="db_restaurantDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_restaurantDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HallUsageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HallUsageForm.Designer.cs">
+      <DependentUpon>HallUsageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestActForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestActForm.Designer.cs">
+      <DependentUpon>RestActForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="AddClientForm.resx">
+      <DependentUpon>AddClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvOrderReg.resx">
+      <DependentUpon>AdvOrderReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AOReportForm.resx">
+      <DependentUpon>AOReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CancelAdvOrdForm.resx">
+      <DependentUpon>CancelAdvOrdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HallUsageForm.resx">
+      <DependentUpon>HallUsageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HallUsageReport.rdlc" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="AOReport.rdlc" />
+    <EmbeddedResource Include="ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestActForm.resx">
+      <DependentUpon>RestActForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestActReport.rdlc" />
+    <None Include="db_restaurantDataSet.xsc">
+      <DependentUpon>db_restaurantDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_restaurantDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_restaurantDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_restaurantDataSet.xss">
+      <DependentUpon>db_restaurantDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available-updates-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-28-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e27cf00576b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat-1298035_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-seo-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male-user-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9ipLd86GT.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus Sign-256x256.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
