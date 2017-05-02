@@ -21,49 +21,44 @@ namespace TermProject
 
         private void CancelAdvOrdForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'db_restaurantDataSet.getUncompletedOrd' table. You can move, or remove it, as needed.
-            //this.getUncompletedOrdTableAdapter.Fill(this.db_restaurantDataSet.getUncompletedOrd);
-            // TODO: This line of code loads data into the 'db_restaurantDataSet.AdvOrdView' table. You can move, or remove it, as needed.
             this.advOrdViewTableAdapter.Fill(this.db_restaurantDataSet.AdvOrdView);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string id = "";
-            //if (!(advOrdViewBindingSource.Current == null))
-            DataRow d = ((DataRowView)advOrdViewBindingSource.Current).Row;
-            id = d["OrdNum"].ToString();
-            try
+            if (advOrdViewDataGridView.SelectedRows.Count > 1)
             {
-                using (SqlConnection con = new SqlConnection(connstr))
-                {
-                    using (SqlCommand cmd = new SqlCommand("cancelAdvOrd", con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.Add("@OrdNum", SqlDbType.Int).Value = id;
-
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                }
+                MessageBox.Show("Choose only one client", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            catch (SqlException er)
-            {
-                MessageBox.Show(er.Message, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            clearElenents();
+            else if (advOrdViewDataGridView.SelectedRows.Count == 0)
+             {
+                 MessageBox.Show("The client is not choosen. Please, choose the client from the list", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+             }
+             else
+             {
+                 string id = advOrdViewDataGridView.SelectedRows[0].Cells[0].Value.ToString();
+                 try
+                 {
+                     using (SqlConnection con = new SqlConnection(connstr))
+                     {
+                         using (SqlCommand cmd = new SqlCommand("cancelAdvOrd", con))
+                         {
+                             cmd.CommandType = CommandType.StoredProcedure;
+                             cmd.Parameters.Add("@OrdNum", SqlDbType.Int).Value = id;
+
+                             con.Open();
+                             cmd.ExecuteNonQuery();
+                         }
+                     }
+                 }
+                 catch (SqlException er)
+                 {
+                     MessageBox.Show(er.Message, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 }
+                 advOrdViewDataGridView.Rows.RemoveAt(advOrdViewDataGridView.SelectedRows[0].Index);
+             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            advOrdViewBindingSource.MovePrevious();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            advOrdViewBindingSource.MoveNext();
-        }
 
         private void clearElenents()
         {

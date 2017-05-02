@@ -81,6 +81,8 @@
             this.Controls.Add(this.hallsUsageReportButton);
             this.Controls.Add(this.advOrdReportButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ReportsForm";
             this.Text = "Reports";
             this.ResumeLayout(false);

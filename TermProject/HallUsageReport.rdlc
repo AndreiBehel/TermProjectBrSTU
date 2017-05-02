@@ -196,7 +196,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total duration of all visits</Value>
+                              <Value>Total duration of all visits, minutes</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -248,7 +248,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Tot_dur_of_vis.Value, "DataSet2")</Value>
+                              <Value>=Fields!Tot_dur_of_vis.Value</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -357,7 +357,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!VisQunt.Value, "DataSet2")</Value>
+                              <Value>=Fields!VisQunt.Value</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -414,7 +414,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Average takin time</Value>
+                              <Value>Average taking time, minutes</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -466,7 +466,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!AvTimeTaking.Value, "DataSet2")</Value>
+                              <Value>=Fields!AvTimeTaking.Value</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -537,7 +537,6 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
         <Top>1.52577cm</Top>
-        <Left>0cm</Left>
         <Height>3.7465cm</Height>
         <Width>16.51cm</Width>
         <Style>
@@ -600,7 +599,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
           <Top>0.17639cm</Top>
-          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>5.38396cm</Width>
           <Style>
@@ -631,7 +629,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
           <Top>1.14625cm</Top>
-          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>5.38396cm</Width>
           <ZIndex>1</ZIndex>
@@ -723,7 +720,6 @@
           </Paragraphs>
           <rd:DefaultName>Textbox14</rd:DefaultName>
           <Top>2.11611cm</Top>
-          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>5.38396cm</Width>
           <ZIndex>4</ZIndex>

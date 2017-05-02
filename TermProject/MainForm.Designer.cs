@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.timeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.advOrdButton = new System.Windows.Forms.Button();
@@ -54,6 +55,10 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quantUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.about = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,9 +90,10 @@
             this.advOrdButton.ForeColor = System.Drawing.Color.White;
             this.advOrdButton.Location = new System.Drawing.Point(12, 373);
             this.advOrdButton.Name = "advOrdButton";
-            this.advOrdButton.Size = new System.Drawing.Size(122, 50);
+            this.advOrdButton.Size = new System.Drawing.Size(130, 50);
             this.advOrdButton.TabIndex = 1;
             this.advOrdButton.Text = "Add adv order";
+            this.toolTip1.SetToolTip(this.advOrdButton, "Register advance order");
             this.advOrdButton.UseVisualStyleBackColor = false;
             this.advOrdButton.Click += new System.EventHandler(this.advOrdButton_Click);
             // 
@@ -100,9 +106,10 @@
             this.Reports.ForeColor = System.Drawing.Color.White;
             this.Reports.Location = new System.Drawing.Point(358, 374);
             this.Reports.Name = "Reports";
-            this.Reports.Size = new System.Drawing.Size(134, 50);
+            this.Reports.Size = new System.Drawing.Size(130, 50);
             this.Reports.TabIndex = 2;
             this.Reports.Text = "Reports";
+            this.toolTip1.SetToolTip(this.Reports, "Show the list of reports");
             this.Reports.UseVisualStyleBackColor = false;
             this.Reports.Click += new System.EventHandler(this.Reports_Click);
             // 
@@ -138,6 +145,7 @@
             this.button2.Size = new System.Drawing.Size(113, 40);
             this.button2.TabIndex = 9;
             this.button2.Text = "Place order";
+            this.toolTip1.SetToolTip(this.button2, "Place operative order");
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -147,11 +155,12 @@
             this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Gray;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(209, 373);
+            this.button1.Location = new System.Drawing.Point(200, 373);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 50);
+            this.button1.Size = new System.Drawing.Size(130, 50);
             this.button1.TabIndex = 12;
             this.button1.Text = "Cancel advence order";
+            this.toolTip1.SetToolTip(this.button1, "Cancel previously registered advanced order");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -216,6 +225,7 @@
             this.button3.Size = new System.Drawing.Size(135, 40);
             this.button3.TabIndex = 37;
             this.button3.Text = "Complete visit";
+            this.toolTip1.SetToolTip(this.button3, "Complete the order");
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -361,6 +371,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(226)))), ((int)(((byte)(230)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.about);
             this.panel3.Controls.Add(this.timeLabel);
             this.panel3.Controls.Add(this.dateLabel);
             this.panel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -368,6 +381,45 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(497, 41);
             this.panel3.TabIndex = 42;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::TermProject.Properties.Resources.notepad_icon;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button6.Location = new System.Drawing.Point(389, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(30, 30);
+            this.button6.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.button6, "Edit reference data");
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::TermProject.Properties.Resources.help;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(432, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(25, 25);
+            this.button5.TabIndex = 6;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // about
+            // 
+            this.about.BackgroundImage = global::TermProject.Properties.Resources.inf;
+            this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.about.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.about.Location = new System.Drawing.Point(463, 6);
+            this.about.Name = "about";
+            this.about.Size = new System.Drawing.Size(25, 25);
+            this.about.TabIndex = 5;
+            this.about.UseVisualStyleBackColor = true;
+            this.about.Click += new System.EventHandler(this.about_Click);
             // 
             // button4
             // 
@@ -379,6 +431,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(30, 30);
             this.button4.TabIndex = 46;
+            this.toolTip1.SetToolTip(this.button4, "Update the list of free tables");
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.comboBox1_DropDown);
             // 
@@ -386,6 +439,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(519, 436);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -394,6 +448,8 @@
             this.Controls.Add(this.Reports);
             this.Controls.Add(this.advOrdButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Administrator\'s Workplace";
             this.panel1.ResumeLayout(false);
@@ -435,6 +491,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button about;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

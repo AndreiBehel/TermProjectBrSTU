@@ -80,6 +80,7 @@
             this.addAdvOrdButton.Size = new System.Drawing.Size(100, 40);
             this.addAdvOrdButton.TabIndex = 40;
             this.addAdvOrdButton.Text = "Register";
+            this.toolTip1.SetToolTip(this.addAdvOrdButton, "Register advance order");
             this.addAdvOrdButton.UseVisualStyleBackColor = false;
             this.addAdvOrdButton.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -218,6 +219,7 @@
             this.visDateTimePicker.Name = "visDateTimePicker";
             this.visDateTimePicker.Size = new System.Drawing.Size(200, 29);
             this.visDateTimePicker.TabIndex = 21;
+            this.visDateTimePicker.Value = new System.DateTime(2017, 4, 27, 0, 0, 0, 0);
             // 
             // stDateTimePicker
             // 
@@ -342,7 +344,7 @@
             0,
             0,
             0});
-            this.quantUpDown.Click += new System.EventHandler(this.updateTableListButton_Click);
+            this.quantUpDown.ValueChanged += new System.EventHandler(this.updateTableListButton_Click);
             // 
             // label5
             // 
@@ -397,7 +399,8 @@
             // 
             this.button2.BackgroundImage = global::TermProject.Properties.Resources.flat_1298035_640;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(236, 188);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(30, 30);
@@ -410,7 +413,8 @@
             // 
             this.button1.BackgroundImage = global::TermProject.Properties.Resources.Plus_Sign_256x256;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(183, 188);
             this.button1.Name = "button1";
@@ -429,8 +433,9 @@
             this.Controls.Add(this.addAdvOrdButton);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AdvOrderReg";
-            this.Text = "Advance order registration";
+            this.Text = "Advance Order Registration";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

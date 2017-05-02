@@ -59,7 +59,7 @@ namespace TermProject
                         using (SqlCommand cmd = new SqlCommand("getListOfFreeTablesAndTime", con))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.Add("@Visitors", SqlDbType.Int).Value = quantUpDown.Text;
+                            cmd.Parameters.Add("@Visitors", SqlDbType.Int).Value = quantUpDown.Value;
 
                             con.Open();
                             cmd.ExecuteNonQuery();
@@ -249,6 +249,12 @@ namespace TermProject
                 MessageBox.Show(er.Message, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return null;
+        }
+
+        private void about_Click(object sender, EventArgs e)
+        {
+            AboutForm af = new AboutForm();
+            af.ShowDialog();
         }
     }
 }

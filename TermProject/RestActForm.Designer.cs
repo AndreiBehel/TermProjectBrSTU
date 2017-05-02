@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RestActForm));
             this.getActivityStatForHallsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_restaurantDataSet = new TermProject.db_restaurantDataSet();
             this.getActivityStatBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -82,19 +83,19 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.getActivityStatForHallsBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.getActivityStatBindingSource;
-            reportDataSource3.Name = "DataSet3";
-            reportDataSource3.Value = this.getQuantOfHallsBindingSource1;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource4.Name = "DataSet1";
+            reportDataSource4.Value = this.getActivityStatForHallsBindingSource;
+            reportDataSource5.Name = "DataSet2";
+            reportDataSource5.Value = this.getActivityStatBindingSource;
+            reportDataSource6.Name = "DataSet3";
+            reportDataSource6.Value = this.getQuantOfHallsBindingSource1;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TermProject.RestActReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(634, 412);
+            this.reportViewer1.Size = new System.Drawing.Size(684, 412);
             this.reportViewer1.TabIndex = 0;
             // 
             // getActivityStatForHallsTableAdapter
@@ -131,10 +132,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 412);
+            this.ClientSize = new System.Drawing.Size(684, 412);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RestActForm";
-            this.Text = "Restaurant activity";
+            this.Text = "Restaurant Activity Report";
             this.Load += new System.EventHandler(this.RestActForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.getActivityStatForHallsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_restaurantDataSet)).EndInit();

@@ -28,6 +28,7 @@ namespace TermProject
         public AdvOrderReg()
         {
             InitializeComponent();
+            visDateTimePicker.Value = DateTime.Now.Date;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,6 +88,12 @@ namespace TermProject
                 message += "Table is not choosen. Choose a table from the list.\n";
                 flag = false;
             }
+            if (visDateTimePicker.Value.Add(stDateTimePicker.Value.TimeOfDay) < DateTime.Now)
+            {
+                message += "Date of visit is less than current date.\n";
+                flag = false;
+            }
+
             foreach (Control c in this.Controls)
             {
                 if (c is TextBox)
@@ -114,6 +121,7 @@ namespace TermProject
             telTextBox.Text = "";
             freeTableListView.Items.Clear();
             quantUpDown.Value = 1;
+            visDateTimePicker.Value = DateTime.Now.Date;
         }
 
         private void updateTableListButton_Click(object sender, EventArgs e)
@@ -127,7 +135,7 @@ namespace TermProject
                         using (SqlCommand cmd = new SqlCommand("getListOfFreeTablesAndTime", con))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.Add("@Visitors", SqlDbType.Int).Value = quantUpDown.Text;
+                            cmd.Parameters.Add("@Visitors", SqlDbType.Int).Value = quantUpDown.Value;
                             cmd.Parameters.Add("@Date", SqlDbType.Date).Value = visDateTimePicker.Value.ToShortDateString();
                             cmd.Parameters.Add("@StartTime", SqlDbType.Time).Value = stDateTimePicker.Value.ToShortTimeString();
 

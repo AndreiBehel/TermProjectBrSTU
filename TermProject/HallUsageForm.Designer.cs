@@ -31,20 +31,36 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HallUsageForm));
             this.getHallUsageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.db_restaurantDataSet = new TermProject.db_restaurantDataSet();
+            this.getHallUsageBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.getHallUsageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getActivityStatForHallsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getActivityStatForHallsTableAdapter = new TermProject.db_restaurantDataSetTableAdapters.getActivityStatForHallsTableAdapter();
             this.getHallUsageTableAdapter = new TermProject.db_restaurantDataSetTableAdapters.getHallUsageTableAdapter();
-            this.getHallUsageBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_restaurantDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getActivityStatForHallsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // getHallUsageBindingSource1
+            // 
+            this.getHallUsageBindingSource1.DataMember = "getHallUsage";
+            this.getHallUsageBindingSource1.DataSource = this.db_restaurantDataSet;
+            // 
+            // db_restaurantDataSet
+            // 
+            this.db_restaurantDataSet.DataSetName = "db_restaurantDataSet";
+            this.db_restaurantDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // getHallUsageBindingSource2
+            // 
+            this.getHallUsageBindingSource2.DataMember = "getHallUsage";
+            this.getHallUsageBindingSource2.DataSource = this.db_restaurantDataSet;
             // 
             // reportViewer1
             // 
@@ -58,18 +74,8 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TermProject.HallUsageReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(634, 412);
+            this.reportViewer1.Size = new System.Drawing.Size(684, 412);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // getHallUsageBindingSource1
-            // 
-            this.getHallUsageBindingSource1.DataMember = "getHallUsage";
-            this.getHallUsageBindingSource1.DataSource = this.db_restaurantDataSet;
-            // 
-            // db_restaurantDataSet
-            // 
-            this.db_restaurantDataSet.DataSetName = "db_restaurantDataSet";
-            this.db_restaurantDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // getHallUsageBindingSource
             // 
@@ -89,25 +95,21 @@
             // 
             this.getHallUsageTableAdapter.ClearBeforeFill = true;
             // 
-            // getHallUsageBindingSource2
-            // 
-            this.getHallUsageBindingSource2.DataMember = "getHallUsage";
-            this.getHallUsageBindingSource2.DataSource = this.db_restaurantDataSet;
-            // 
             // HallUsageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 412);
+            this.ClientSize = new System.Drawing.Size(684, 412);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HallUsageForm";
-            this.Text = "Hall\'s usage statistics";
+            this.Text = "Hall\'s Usage Report";
             this.Load += new System.EventHandler(this.HallUsageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_restaurantDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getActivityStatForHallsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getHallUsageBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }

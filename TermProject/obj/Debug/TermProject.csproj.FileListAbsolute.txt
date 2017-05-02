@@ -1,12 +1,7 @@
-D:\Progs\TermProject\TermProject\bin\Debug\TermProject.exe.config
-D:\Progs\TermProject\TermProject\bin\Debug\TermProject.exe
-D:\Progs\TermProject\TermProject\bin\Debug\TermProject.pdb
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.csprojResolveAssemblyReference.cache
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.MainForm.resources
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.Properties.Resources.resources
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.csproj.GenerateResource.Cache
-D:\Progs\TermProject\TermProject\obj\Debug\TermProject.exe
-D:\Progs\TermProject\TermProject\obj\Debug\TermProject.pdb
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.AdvOrderReg.resources
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.CancelAdvOrdForm.resources
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.ReportsForm.resources
@@ -16,3 +11,8 @@ D:\Progs\TermProject\TermProject\obj\Debug\TermProject.AOReportForm.resources
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.HallUsageForm.resources
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.RestActForm.resources
 D:\Progs\TermProject\TermProject\obj\Debug\TermProject.AddClientForm.resources
+D:\Progs\TermProject\TermProject\bin\Debug\TermProject.exe.config
+D:\Progs\TermProject\TermProject\bin\Debug\TermProject.exe
+D:\Progs\TermProject\TermProject\bin\Debug\TermProject.pdb
+D:\Progs\TermProject\TermProject\obj\Debug\TermProject.exe
+D:\Progs\TermProject\TermProject\obj\Debug\TermProject.pdb

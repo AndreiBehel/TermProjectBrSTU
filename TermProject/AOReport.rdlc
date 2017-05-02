@@ -475,7 +475,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Canceled searts</Value>
+                              <Value>Canceled seats</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -591,7 +591,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
         <Top>3.76026cm</Top>
-        <Height>1.48223cm</Height>
+        <Height>1.48222cm</Height>
         <Width>16.51cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
