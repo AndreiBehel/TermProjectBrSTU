@@ -35,7 +35,6 @@ namespace TermProject
         {
             // TODO: This line of code loads data into the 'db_restaurantDataSet.Client' table. You can move, or remove it, as needed.
             this.clientTableAdapter.Fill(this.db_restaurantDataSet.Client);
-
         }
 
         private void button1_Click(object sender, EventArgs e)

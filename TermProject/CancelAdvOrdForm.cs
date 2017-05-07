@@ -71,5 +71,18 @@ namespace TermProject
                 }
             }
         }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.advOrdViewTableAdapter.Fill(this.db_restaurantDataSet.AdvOrdView);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

@@ -17,3 +17,5 @@ D:\Progs\TermProject\TermProject\obj\Release\TermProject.exe
 D:\Progs\TermProject\TermProject\obj\Release\TermProject.pdb
 D:\Progs\TermProject\TermProject\obj\Release\TermProject.csprojResolveAssemblyReference.cache
 D:\Progs\TermProject\TermProject\obj\Release\TermProject.AboutForm.resources
+D:\Progs\TermProject\TermProject\bin\Release\Help.chm
+D:\Progs\TermProject\TermProject\obj\Release\TermProject.RefDocForm.resources

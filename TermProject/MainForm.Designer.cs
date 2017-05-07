@@ -49,17 +49,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.freeTableListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.quantUpDown = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.about = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantUpDown)).BeginInit();
@@ -92,7 +92,7 @@
             this.advOrdButton.Name = "advOrdButton";
             this.advOrdButton.Size = new System.Drawing.Size(130, 50);
             this.advOrdButton.TabIndex = 1;
-            this.advOrdButton.Text = "Add adv order";
+            this.advOrdButton.Text = "Add advance order";
             this.toolTip1.SetToolTip(this.advOrdButton, "Register advance order");
             this.advOrdButton.UseVisualStyleBackColor = false;
             this.advOrdButton.Click += new System.EventHandler(this.advOrdButton_Click);
@@ -305,6 +305,20 @@
             this.panel2.Size = new System.Drawing.Size(318, 302);
             this.panel2.TabIndex = 41;
             // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::TermProject.Properties.Resources.refresh;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(272, 121);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(30, 30);
+            this.button4.TabIndex = 46;
+            this.toolTip1.SetToolTip(this.button4, "Update the list of free tables");
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.comboBox1_DropDown);
+            // 
             // freeTableListView
             // 
             this.freeTableListView.Activation = System.Windows.Forms.ItemActivation.OneClick;
@@ -395,6 +409,7 @@
             this.button6.TabIndex = 7;
             this.toolTip1.SetToolTip(this.button6, "Edit reference data");
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -406,7 +421,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(25, 25);
             this.button5.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.button5, "Help");
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // about
             // 
@@ -418,22 +435,9 @@
             this.about.Name = "about";
             this.about.Size = new System.Drawing.Size(25, 25);
             this.about.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.about, "About");
             this.about.UseVisualStyleBackColor = true;
             this.about.Click += new System.EventHandler(this.about_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::TermProject.Properties.Resources.refresh;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(272, 121);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 30);
-            this.button4.TabIndex = 46;
-            this.toolTip1.SetToolTip(this.button4, "Update the list of free tables");
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.comboBox1_DropDown);
             // 
             // MainForm
             // 

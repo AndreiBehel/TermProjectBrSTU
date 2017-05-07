@@ -15,9 +15,9 @@ namespace TermProject
 {
     public partial class MainForm : Form
     {
-        string connstr = TermProject.Utility.GetConnectionString();
-        DataTable dt = new DataTable();
-        DataTable dtUsedSeats = new DataTable();
+        private string connstr = TermProject.Utility.GetConnectionString();
+        private DataTable dt = new DataTable();
+        private DataTable dtUsedSeats = new DataTable();
 
         public MainForm()
         {
@@ -25,13 +25,10 @@ namespace TermProject
 
             timer1.Enabled = true;
             timer1.Interval = 1000;
-            
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            //DateTime dt = DateTime.Now;
-            //timeLabel.Text = dt.ToString("T", Thread.CurrentThread.CurrentCulture);
             timeLabel.Text = DateTime.Now.ToLongTimeString();
             dateLabel.Text = DateTime.Now.ToShortDateString();
         }
@@ -83,12 +80,10 @@ namespace TermProject
                             sqlReader.Close();
                         }
                     }
-                   
                 }
                 catch (SqlException er)
                 {
                     MessageBox.Show(er.Message, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             else
@@ -136,11 +131,26 @@ namespace TermProject
         }
         private bool checkCorrectness()
         {
+            StringBuilder message = new StringBuilder("");
             bool flag = true;
-            if ( freeTableListView.SelectedItems.Count < 1)
+            if (freeTableListView.SelectedItems.Count < 1)
             {
-                MessageBox.Show("Table is not choosen. Choose a table from the list.", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                message.Append("Table is not choosen. Choose a table from the list.\n");
                 flag = false;
+            }
+            else
+            {
+                if (dt.Rows[freeTableListView.SelectedItems[0].Index][3] != DBNull.Value &&
+                    (TimeSpan)dt.Rows[freeTableListView.SelectedItems[0].Index][3] < DateTime.Now.Add(endDateTimePicker.Value.TimeOfDay).TimeOfDay)
+                {
+                    message.Append("The choosen table will be not free.\nChoose another table or reduce duration of visit\n");
+                    flag = false;
+                }
+            }
+            
+            if (!flag)
+            {
+                MessageBox.Show(message.ToString(), "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return flag;
         }
@@ -228,7 +238,7 @@ namespace TermProject
             }
             else
             {
-                MessageBox.Show("The information for the order was not filles in", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("The information for the order was not filles in.", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -255,6 +265,19 @@ namespace TermProject
         {
             AboutForm af = new AboutForm();
             af.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"\" + "Help.chm");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Be careful!\nEditing of reference data can lead to corruption of data.",
+                "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            RefDocForm rdf = new RefDocForm();
+            rdf.ShowDialog();
         }
     }
 }

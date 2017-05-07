@@ -82,34 +82,37 @@ namespace TermProject
         private bool checkCorrectness()
         {
             bool flag = true;
-            string message = "";
+            StringBuilder message = new StringBuilder("");
             if (freeTableListView.SelectedItems.Count < 1)
             {
-                message += "Table is not choosen. Choose a table from the list.\n";
+                message.Append("Table is not choosen. Choose a table from the list.\n");
                 flag = false;
+            }
+            else
+            {
+                TimeSpan ts = visDateTimePicker.Value.Add(endDateTimePicker.Value.TimeOfDay).Add(stDateTimePicker.Value.TimeOfDay).TimeOfDay;
+                if (dt.Rows[freeTableListView.SelectedItems[0].Index][3] != DBNull.Value &&
+                    (TimeSpan)dt.Rows[freeTableListView.SelectedItems[0].Index][3] < ts)
+                {
+                    message.Append("The choosen table will be not free.\nChoose another table or reduce duration of visit\n");
+                    flag = false;
+                }
             }
             if (visDateTimePicker.Value.Add(stDateTimePicker.Value.TimeOfDay) < DateTime.Now)
             {
-                message += "Date of visit is less than current date.\n";
+                 message.Append("Date of visit is less than current date.\n");
                 flag = false;
             }
-
-            foreach (Control c in this.Controls)
+            if (string.IsNullOrEmpty(nameTextBox.Text) || string.IsNullOrEmpty(surnameTextBox.Text)
+                || string.IsNullOrEmpty(patrTextBox.Text) || string.IsNullOrEmpty(telTextBox.Text))
             {
-                if (c is TextBox)
-                {
-                    TextBox textBox = c as TextBox;
-                    if (string.IsNullOrEmpty(textBox.Text))
-                    {
-                        message += "Client information is not inputed.\n";
-                        flag = false;
-                        break;
-                    }
-                }
+                  message.Append("Client information is not inputed.\n");
+                 flag = false;
             }
+            
             if(!flag)
             {
-                MessageBox.Show(message, "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(message.ToString(), "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             return flag;
         }
@@ -166,7 +169,6 @@ namespace TermProject
                 catch (SqlException er)
                 {
                     MessageBox.Show(er.Message, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
             }
             else

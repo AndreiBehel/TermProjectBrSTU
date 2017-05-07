@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdvOrderReg));
             this.addAdvOrdButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +48,10 @@
             this.stDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.updateTableListButton = new System.Windows.Forms.Button();
             this.freeTableListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,9 +63,6 @@
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new TermProject.db_restaurantDataSetTableAdapters.TableAdapterManager();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.updateTableListButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantUpDown)).BeginInit();
@@ -268,6 +269,35 @@
             this.panel1.TabIndex = 31;
             this.toolTip1.SetToolTip(this.panel1, "Information about client");
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::TermProject.Properties.Resources.flat_1298035_640;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(236, 188);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(30, 30);
+            this.button2.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.button2, "Clear and reset all fields");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::TermProject.Properties.Resources.Plus_Sign_256x256;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(183, 188);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.button1, "Choose client from the  list");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(226)))), ((int)(((byte)(230)))));
@@ -287,6 +317,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(373, 364);
             this.panel2.TabIndex = 32;
+            // 
+            // updateTableListButton
+            // 
+            this.updateTableListButton.BackgroundImage = global::TermProject.Properties.Resources.refresh;
+            this.updateTableListButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateTableListButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.updateTableListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateTableListButton.Location = new System.Drawing.Point(259, 216);
+            this.updateTableListButton.Name = "updateTableListButton";
+            this.updateTableListButton.Size = new System.Drawing.Size(30, 30);
+            this.updateTableListButton.TabIndex = 50;
+            this.toolTip1.SetToolTip(this.updateTableListButton, "Refresh list of free tables");
+            this.updateTableListButton.UseVisualStyleBackColor = true;
+            this.updateTableListButton.Click += new System.EventHandler(this.updateTableListButton_Click);
             // 
             // freeTableListView
             // 
@@ -381,49 +425,6 @@
             this.tableAdapterManager.UpdateOrder = TermProject.db_restaurantDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VisitTableAdapter = null;
             // 
-            // updateTableListButton
-            // 
-            this.updateTableListButton.BackgroundImage = global::TermProject.Properties.Resources.refresh;
-            this.updateTableListButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateTableListButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.updateTableListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateTableListButton.Location = new System.Drawing.Point(259, 216);
-            this.updateTableListButton.Name = "updateTableListButton";
-            this.updateTableListButton.Size = new System.Drawing.Size(30, 30);
-            this.updateTableListButton.TabIndex = 50;
-            this.toolTip1.SetToolTip(this.updateTableListButton, "Refresh list of free tables");
-            this.updateTableListButton.UseVisualStyleBackColor = true;
-            this.updateTableListButton.Click += new System.EventHandler(this.updateTableListButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::TermProject.Properties.Resources.flat_1298035_640;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(236, 188);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 30);
-            this.button2.TabIndex = 21;
-            this.toolTip1.SetToolTip(this.button2, "Clear and reset all fields");
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::TermProject.Properties.Resources.Plus_Sign_256x256;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(183, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 20;
-            this.toolTip1.SetToolTip(this.button1, "Choose client from the  list");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // AdvOrderReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,6 +434,7 @@
             this.Controls.Add(this.addAdvOrdButton);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AdvOrderReg";
             this.Text = "Advance Order Registration";

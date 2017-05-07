@@ -126,6 +126,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RefDocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefDocForm.Designer.cs">
+      <DependentUpon>RefDocForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="AOReport.rdlc" />
+    <EmbeddedResource Include="RefDocForm.resx">
+      <DependentUpon>RefDocForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportsForm.resx">
       <DependentUpon>ReportsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,9 @@
     </None>
     <None Include="db_restaurantDataSet.xss">
       <DependentUpon>db_restaurantDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Help.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
